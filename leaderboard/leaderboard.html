@@ -79,6 +79,8 @@
             stdNo = 0;
             tbody.innerHTML = "";
             list_score.sort(function (a, b) {
+                a.SCORE = a.SCORE.replaceAll(',', '');
+                b.SCORE = b.SCORE.replaceAll(',', '');
                 return b.SCORE - a.SCORE; 
             });
             console.log(list_score);
